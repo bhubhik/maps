@@ -2,8 +2,8 @@ import { faker } from '@faker-js/faker';
 import { useEffect, useState } from 'react';
 
 interface Address {
-  lat: string;
-  lng: string;
+  lat: number;
+  lng: number;
 }
 interface Users {
   name: string;
@@ -18,8 +18,8 @@ const User = () => {
       user.push({
         name: faker.name.findName(),
         address: {
-          lat: faker.address.latitude(),
-          lng: faker.address.longitude(),
+          lat: parseFloat(faker.address.latitude()),
+          lng: parseFloat(faker.address.longitude()),
         },
       });
     }
