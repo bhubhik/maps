@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 import { useEffect, useState } from 'react';
 
-interface Address {
+export interface Address {
   lat: number;
   lng: number;
 }
