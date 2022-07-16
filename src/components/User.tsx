@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 import { useEffect, useState } from 'react';
 
-interface Address {
+export interface Address {
   lat: number;
   lng: number;
 }
@@ -25,12 +25,16 @@ const User = () => {
     }
     setUsers(user);
   };
+  const fetchMore = () => {
+    generateNames(5);
+  };
 
   useEffect(() => {
     generateNames(5);
   }, []);
   return (
     <div>
+      <button onClick={fetchMore}>Next</button>
       {users.map((user, idx) => (
         <div key={idx}>
           <h2>{user.name}</h2>

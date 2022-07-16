@@ -1,13 +1,11 @@
-import React from 'react';
+import Company from './components/Company';
 import User from './components/User';
 
-export interface AppProps {
-  color?: string;
-}
-const App = (props: AppProps): JSX.Element => {
+const App = (): JSX.Element => {
   return (
     <>
       <User />
+      <Company />
     </>
   );
 };
