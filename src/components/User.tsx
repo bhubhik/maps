@@ -28,7 +28,6 @@ const User = () => {
   const fetchMore = () => {
     generateNames(5);
   };
-
   useEffect(() => {
     generateNames(5);
   }, []);
